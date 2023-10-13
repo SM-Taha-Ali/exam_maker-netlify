@@ -7,7 +7,7 @@ async function createPaper(req, res) {
     let success = false
     try {
         // Creating user by using create method of mongoose model
-        let paper = await PastpapersFB.create({
+        let paper = await PastpapersKB.create({
             year: req.body.year,
             section: req.body.section,
             marks: req.body.marks,
@@ -26,7 +26,7 @@ async function createPaper(req, res) {
 
 async function getPaper(req, res) {
     try {
-        const paper = await PastpapersFB.find();
+        const paper = await PastpapersKB.find();
         res.json(paper);
     }
     catch (error) {
