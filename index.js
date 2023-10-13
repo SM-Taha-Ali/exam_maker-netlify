@@ -21,13 +21,13 @@ app.use('/api/pastPaperfb', require('./routes/pastpapersFB.js'))
 app.use('/api/questionBank', require('./routes/questionbank.js'))
 
 // HOSTING PURPOSES
-if (process.env.NODE_ENV == "production"){
-    app.use(express.static("client/build"))
-    const path = require("path");
-    app.get("*", (req,res)=> {
-        res.sendfile(path.resolve(__dirname, "client", "build", "index.html"));
+if (process.env.NODE_ENV == "production") {
+    const root = require('path').join(__dirname, 'client', 'build')
+    app.use(express.static(root));
+    app.get("*", (req, res) => {
+      res.sendFile('index.html', { root });
     })
-}
+  }
 
 // SERVER RUN
 app.listen(PORT, ()=> {
