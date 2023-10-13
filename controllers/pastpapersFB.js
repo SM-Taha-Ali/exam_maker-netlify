@@ -1,4 +1,4 @@
-const PastpapersKB = require('../models/PastpapersFB')
+const PastPapersFB = require('../models/PastPapersFB')
 
 
 async function createPaper(req, res) {
@@ -7,7 +7,7 @@ async function createPaper(req, res) {
     let success = false
     try {
         // Creating user by using create method of mongoose model
-        let paper = await PastpapersKB.create({
+        let paper = await PastPapersFB.create({
             year: req.body.year,
             section: req.body.section,
             marks: req.body.marks,
@@ -26,7 +26,7 @@ async function createPaper(req, res) {
 
 async function getPaper(req, res) {
     try {
-        const paper = await PastpapersKB.find();
+        const paper = await PastPapersFB.find();
         res.json(paper);
     }
     catch (error) {

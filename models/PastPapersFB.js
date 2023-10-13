@@ -32,6 +32,6 @@ const PastpapersFBSchema = new Schema({
     }
 });
 
-const PastpapersFB = mongoose.model('PastpapersFB', PastpapersFBSchema)
+const PastPapersFB = mongoose.model('PastPapersFB', PastpapersFBSchema)
 
-module.exports = PastpapersFB;
+module.exports = PastPapersFB;
