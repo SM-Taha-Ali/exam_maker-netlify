@@ -34,6 +34,4 @@ const PastpapersFBSchema = new Schema({
 
 const PastpapersFB = mongoose.model('PastpapersFB', PastpapersFBSchema)
 
-PastpapersFB.createIndexes();
-
 module.exports = PastpapersFB;

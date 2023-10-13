@@ -46,6 +46,4 @@ const PastpapersKBSchema = new Schema({
 
 const PastpapersKB = mongoose.model('PastpapersKB', PastpapersKBSchema)
 
-PastpapersKB.createIndexes();
-
 module.exports = PastpapersKB;

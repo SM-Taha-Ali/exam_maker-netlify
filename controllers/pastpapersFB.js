@@ -1,4 +1,4 @@
-const PastpapersKB = require('../models/PastpapersFB.js')
+const PastpapersKB = require('../models/PastpapersFB')
 
 
 async function createPaper(req, res) {

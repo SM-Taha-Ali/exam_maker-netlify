@@ -1,4 +1,4 @@
-const QuestionBank =  require("../models/Questionbank.js")
+const QuestionBank =  require("../models/Questionbank")
 
 async function writePaper(req,res){
 

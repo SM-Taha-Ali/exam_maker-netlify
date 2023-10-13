@@ -1,32 +1,32 @@
 const mongoose = require('mongoose');
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
 const QustionBankSchema = new Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'user'
     },
-    question:{
-        type : String,
+    question: {
+        type: String,
         required: true
     },
     subParts: {
         type: Array,
         default: []
     },
-    paperType:{
+    paperType: {
         type: String,
         required: true
     },
-    subject:{
+    subject: {
         type: String,
         required: true
     },
-    section:{
+    section: {
         type: String,
         required: true
     },
-    marks:{
+    marks: {
         type: String,
         required: true
     },
@@ -40,6 +40,6 @@ const QustionBankSchema = new Schema({
     }
 })
 
-const QuestionBank = mongoose.model('QuestionBank.js',QustionBankSchema)
-QuestionBank.createIndexes()
+const QuestionBank = mongoose.model('QuestionBank.js', QustionBankSchema)
+
 module.exports = QuestionBank;
