@@ -29,12 +29,6 @@ if (process.env.NODE_ENV == "production") {
     })
 }
 
-const root = require('path').join(__dirname, 'client', 'build')
-app.use(express.static(root));
-app.get("*", (req, res) => {
-    res.sendFile('index.html', { root });
-})
-
 // SERVER RUN
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
